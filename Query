@@ -1,0 +1,26 @@
+package lesson_2.q_3;
+
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name="query")
+public class Query {
+
+    @XmlAttribute
+    private int count;
+    @XmlAttribute
+    private String created;
+    @XmlAttribute
+    private String lang;
+    @XmlElement
+    private Results results;
+
+    public Query() {
+    }
+
+    @Override
+    public String toString() {
+        return "\n" + results;
+    }
+}
